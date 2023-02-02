@@ -18,6 +18,7 @@ urlpatterns = [
     # path for login
 
     # path for logout
+     path("signup", views.signup, name='signup'),
      path("about", views.aboutus, name='about'),
      path("contact", views.contactus, name='contact'),
      path('', views.get_dealerships, name='index'),

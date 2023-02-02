@@ -50,6 +50,10 @@ def contactus(request):
    return render(request, 'contactus.html') 
 
 
+def signup(request):
+   return render(request, 'signup.html') 
+
+
 
 
 

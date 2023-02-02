@@ -46,7 +46,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -126,5 +125,8 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
+
+CSRF_TRUSTED_ORIGINS=['https://sucharithach-8000.theiadocker-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
