@@ -41,7 +41,18 @@ logger = logging.getLogger(__name__)
 def get_dealerships(request):
     context = {}
     if request.method == "GET":
-        return render(request, 'djangoapp/index.html', context)
+        return render(request, 'index.html', context)
+
+def aboutus(request):
+   return render(request, 'aboutus.html') 
+
+def contactus(request):
+   return render(request, 'contactus.html') 
+
+
+
+
+
 
 
 # Create a `get_dealer_details` view to render the reviews of a dealer
