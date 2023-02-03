@@ -57,11 +57,15 @@ def signup(request):
         last_name=request.POST['last_name']
         email=request.POST['email']
         password=request.POST['password']
-
-        user=User.objects.create_user(username=username,password=password,email=email,first_name=first_name,last_name=last_name)
-        user.save();
-        print('user created')
-        return redirect('/')
+        if User.objects.filter(username=username).exists():
+            print('username taken')
+            messages.info(request,'Username already exists')
+            return redirect('/djangoapp/signup')
+        else:
+            user=User.objects.create_user(username=username,password=password,email=email,first_name=first_name,last_name=last_name)
+            user.save()
+            print('user created')
+        return redirect('/djangoapp')
     else:
         return render(request, 'signup.html') 
     
