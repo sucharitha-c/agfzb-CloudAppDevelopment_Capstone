@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User,auth
 from django.shortcuts import get_object_or_404, render, redirect
 # from .models import related models
 # from .restapis import related methods
@@ -51,7 +51,20 @@ def contactus(request):
 
 
 def signup(request):
-   return render(request, 'signup.html') 
+    if request.method=='POST':
+        username=request.POST['username']
+        first_name=request.POST['first_name']
+        last_name=request.POST['last_name']
+        email=request.POST['email']
+        password=request.POST['password']
+
+        user=User.objects.create_user(username=username,password=password,email=email,first_name=first_name,last_name=last_name)
+        user.save();
+        print('user created')
+        return redirect('/')
+    else:
+        return render(request, 'signup.html') 
+    
 
 
 

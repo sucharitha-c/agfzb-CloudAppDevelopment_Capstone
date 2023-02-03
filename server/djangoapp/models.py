@@ -25,3 +25,9 @@ from django.utils.timezone import now
 
 
 # <HINT> Create a plain Python class `DealerReview` to hold review data
+
+class CarDealer(models.Model):
+    
+    brand = models.CharField(max_length=100)
+    color = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)

@@ -78,12 +78,17 @@ WSGI_APPLICATION = 'djangobackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fullstackdb',
+        'USER':'postgres',
+        'HOST':'localhost',
+        'PASSWORD':'OTQxOS1zdWNoYXJp',
+        'PORT':'5432'
+
     }
 }
 
-
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
