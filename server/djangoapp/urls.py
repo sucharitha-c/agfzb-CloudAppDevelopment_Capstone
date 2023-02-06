@@ -23,6 +23,7 @@ urlpatterns = [
      path("contact", views.contactus, name='contact'),
      path('', views.get_dealerships, name='index'),
      path("login", views.login, name='login'),
+     path("logout", views.logout, name='logout'),
 
     # path for dealer reviews view
 

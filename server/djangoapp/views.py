@@ -4,7 +4,7 @@ from django.contrib.auth.models import User,auth
 from django.shortcuts import get_object_or_404, render, redirect
 # from .models import related models
 # from .restapis import related methods
-from django.contrib.auth import logout, authenticate
+from django.contrib.auth import authenticate
 from django.contrib import messages
 from datetime import datetime
 import logging
@@ -84,6 +84,10 @@ def signup(request):
         return redirect('/djangoapp')
     else:
         return render(request, 'signup.html') 
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/djangoapp')
     
 
 
