@@ -4,14 +4,14 @@ from django.utils.timezone import now
 
 # Create your models here.
 
-# <HINT> Create a Car Make model `class CarMake(models.Model)`:
+# <HINT> Create a Car Make model `class CarMake(models.Model)`=
 # - Name
 # - Description
 # - Any other fields you would like to include in car make model
 # - __str__ method to print a car make object
 
 
-# <HINT> Create a Car Model model `class CarModel(models.Model):`:
+# <HINT> Create a Car Model model `class CarModel(models.Model)=`=
 # - Many-To-One relationship to Car Make model (One Car Make has many Car Models, using ForeignKey field)
 # - Name
 # - Dealer id, used to refer a dealer created in cloudant database
@@ -26,8 +26,15 @@ from django.utils.timezone import now
 
 # <HINT> Create a plain Python class `DealerReview` to hold review data
 
-class CarDealer(models.Model):
+class dealerships(models.Model):
+      id: int
+      city:str
+      state: str
+      st:str
+      address: str
+      zip: int
+      lat: str
+      longi: str
+      short_name: str
+      full_name: str
     
-    brand = models.CharField(max_length=100)
-    color = models.CharField(max_length=100)
-    model = models.CharField(max_length=100)

@@ -39,7 +39,47 @@
 </nav>
   
 <div class="container">
-  <h3>This is the index page of your navigation bar</h3>
+  <h3>This is the index page of your navigation bar {{d1.city}}</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>state</th>
+        <th>city</th>
+        <th>st</th>
+        <th>address</th>
+        <th>zip</th>
+        <th>lat</th>
+        <th>long</th>
+        <th>short_name</th>
+        <th>full_name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{d1.id}}/td>
+        <td>{{d1.state}}</td>
+        <td>{{d1.city}}</td>
+        <td>{{d1.st}}</td>
+        <td>{{d1.address}}/td>
+        <td>{{d1.zip}}</td>
+        <td>{{d1.lat}}</td>
+        <td>{{d1.longi}}/td>
+        <td>{{d1.short_name}}</td>
+        <td>{{d1.full_name}}</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 </body>
