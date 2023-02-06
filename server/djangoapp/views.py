@@ -4,7 +4,7 @@ from django.contrib.auth.models import User,auth
 from django.shortcuts import get_object_or_404, render, redirect
 # from .models import related models
 # from .restapis import related methods
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import logout, authenticate
 from django.contrib import messages
 from datetime import datetime
 import logging
@@ -38,6 +38,22 @@ logger = logging.getLogger(__name__)
 # ...
 
 # Update the `get_dealerships` view to render the index page with a list of dealerships
+def login(request):
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['password']
+        user = auth.authenticate(username=username,password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/djangoapp')
+        else:
+            messages.info(request,'invalid credentials')
+            return redirect('/djangoapp/login')
+    else:
+        return render(request, 'login.html')
+
+
 def get_dealerships(request):
     context = {}
     if request.method == "GET":

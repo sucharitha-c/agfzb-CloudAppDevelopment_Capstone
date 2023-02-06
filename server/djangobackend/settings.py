@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'fullstackdb',
         'USER':'postgres',
         'HOST':'localhost',
-        'PASSWORD':'MzA0OTEtc3VjaGFy',
+        'PASSWORD':'Njc5NC1zdWNoYXJp',
         'PORT':'5432'
 
     }
