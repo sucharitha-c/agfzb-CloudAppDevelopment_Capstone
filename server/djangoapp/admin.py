@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .models import make,model
 # from .models import related models
 
 
@@ -11,3 +12,5 @@ from django.contrib import admin
 # CarMakeAdmin class with CarModelInline
 
 # Register models here
+admin.site.register(make)
+admin.site.register(model)

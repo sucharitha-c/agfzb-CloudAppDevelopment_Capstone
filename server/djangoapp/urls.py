@@ -21,9 +21,9 @@ urlpatterns = [
      path("signup", views.signup, name='signup'),
      path("about", views.aboutus, name='about'),
      path("contact", views.contactus, name='contact'),
-     path('', views.get_dealerships, name='index'),
      path("login", views.login, name='login'),
      path("logout", views.logout, name='logout'),
+     path('', views.get_dealerships, name='index'),
 
     # path for dealer reviews view
 

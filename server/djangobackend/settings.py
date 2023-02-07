@@ -82,10 +82,11 @@ DATABASES = {
         'NAME': 'fullstackdb',
         'USER':'postgres',
         'HOST':'localhost',
-        'PASSWORD':'Njc5NC1zdWNoYXJp',
+        'PASSWORD':'NDYzLXN1Y2hhcml0',
         'PORT':'5432'
 
     }
+
 }
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
@@ -134,4 +135,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-CSRF_TRUSTED_ORIGINS=['https://sucharithach-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+CSRF_TRUSTED_ORIGINS=['https://sucharithach-8000.theiadocker-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
