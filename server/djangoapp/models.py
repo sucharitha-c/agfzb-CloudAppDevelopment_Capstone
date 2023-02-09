@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.timezone import now
-
+from django.contrib.auth.models import User,auth
 
 # Create your models here.
 
@@ -36,5 +36,11 @@ class model(models.Model):
     model_type =models.CharField(max_length=100)
     year =models.DateField
 
-
+class dealer(models.Model):
+    dealer_id=models.IntegerField(primary_key=True)
+    name=models.CharField(max_length=100)
+    city=models.CharField(max_length=100)
+    address=models.CharField(max_length=100)
+    zip=models.IntegerField()
+    state=models.CharField(max_length=100)
     

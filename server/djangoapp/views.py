@@ -9,6 +9,7 @@ from django.contrib import messages
 from datetime import datetime
 import logging
 import json
+from .models import dealer
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -39,7 +40,8 @@ logger = logging.getLogger(__name__)
 
 # Update the `get_dealerships` view to render the index page with a list of dealerships
 def get_dealerships(request):
-      return render(request, "index.html")
+      dealers=dealer.objects.all()
+      return render(request, "index.html",{'dealers':dealers})
 
 def login(request):
     if request.method=='POST':

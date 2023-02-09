@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import make,model
-# from .models import related models
+from .models import make,model,dealer
 
 
 # Register your models here.
@@ -14,3 +13,5 @@ from .models import make,model
 # Register models here
 admin.site.register(make)
 admin.site.register(model)
+admin.site.register(dealer)
+
