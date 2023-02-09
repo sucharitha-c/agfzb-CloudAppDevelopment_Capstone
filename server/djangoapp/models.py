@@ -44,3 +44,14 @@ class dealer(models.Model):
     zip=models.IntegerField()
     state=models.CharField(max_length=100)
     
+class review(models.Model):
+    dealer=models.ForeignKey(dealer, on_delete=models.CASCADE, related_name="reviews")
+    content=models.CharField(max_length=1000,default="no comments yet")
+    date_joined=models.DateTimeField(auto_now_add=True)
+    name=User.first_name
+    
+    class Meta:
+        ordering=("date_joined",)
+
+    def  ___str___(self):
+        return f"Review by {self.name}"

@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'fullstackdb',
         'USER':'postgres',
         'HOST':'localhost',
-        'PASSWORD':'MjI0NTQtc3VjaGFy',
+        'PASSWORD':'NDIyNC1zdWNoYXJp',
         'PORT':'5432'
 
     }
@@ -135,4 +135,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 MEDIA_URL = '/media/'
 
-CSRF_TRUSTED_ORIGINS=['https://sucharithach-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+CSRF_TRUSTED_ORIGINS=['https://sucharithach-8000.theiadocker-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
